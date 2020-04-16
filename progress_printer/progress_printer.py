@@ -10,11 +10,11 @@ DrCRumpf@gmail.com
 
 import sys
 import datetime
-import time
-import numpy as np
 
 
-def ProgressStatus(i_operation, n_operations, datetime_t0):
+def ProgressStatus(i_operation, n_operations):
+    if i_operation == 0:
+        datetime_t0 = datetime.datetime.now()
     progress_percent = (float(i_operation+1)/float(n_operations))*100
     current_time = datetime.datetime.now()
     t_duration = current_time - datetime_t0
@@ -25,7 +25,7 @@ def ProgressStatus(i_operation, n_operations, datetime_t0):
     cout_string  = '{0:.1f}% done...projected finish on {1:s}'.format(progress_percent, finish_time.strftime('%y/%m/%d - %H:%M:%S'))
     sys.stdout.write('\r'+cout_string)
     if progress_percent == 100.0:
-    	print('')
+        print('')
     
 
 

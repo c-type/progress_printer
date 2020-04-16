@@ -5,6 +5,7 @@ The progress_printer package provides an easy way to output the progress and est
 
 To use, do:
 	>>> import progress_printer as pp
-	>>> t0 = datetime.datetime.now()
 	>>> for i, list_item in enumerate(list):
-    >>>     pp.ProgressStatus(i, len(list), t0)
+	>>>     pp.ProgressStatus(i, len(list))
+	>>>     # do something
+

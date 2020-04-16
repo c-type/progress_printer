@@ -5,7 +5,7 @@ def readme():
             return f.read()
 
 setup(name='progress_printer',
-      version='0.3.1',
+      version='0.4',
       description='Provides a progress indicator',
       url='https://github.com/c-type/project_printer',
       author='ctype',
