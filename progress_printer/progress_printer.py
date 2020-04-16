@@ -12,9 +12,8 @@ import sys
 import datetime
 
 
-def ProgressStatus(i_operation, n_operations):
-    if i_operation == 0:
-        datetime_t0 = datetime.datetime.now()
+
+def ProgressStatus(i_operation, n_operations, datetime_t0):
     progress_percent = (float(i_operation+1)/float(n_operations))*100
     current_time = datetime.datetime.now()
     t_duration = current_time - datetime_t0
@@ -27,6 +26,3 @@ def ProgressStatus(i_operation, n_operations):
     if progress_percent == 100.0:
         print('')
     
-
-
-
